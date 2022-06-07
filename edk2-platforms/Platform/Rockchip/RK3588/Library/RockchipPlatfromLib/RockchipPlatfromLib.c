@@ -172,6 +172,17 @@ Usb2PhyResume (void)
   MmioWrite32(0xfd7f0a10, 0x07000000);
 }
 
+void
+EFIAPI
+UdPhyU3PortDisable (void)
+{
+  /* disable U3 port */
+  MmioWrite32 (0xfd5ac01c, 0xf08d0089);
+  MmioWrite32 (0xfd5ac034, 0xf08d0089);
+  /* remove rx-termination */
+  MmioWrite32 (0xfd5c800c, 0x00030001);
+  MmioWrite32 (0xfd5cc00c, 0x00030001);
+}
 
 void
 EFIAPI

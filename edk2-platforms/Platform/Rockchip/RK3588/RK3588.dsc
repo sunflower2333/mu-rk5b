@@ -218,6 +218,20 @@
   gRockchipTokenSpaceGuid.PcdEhciSize|0x80000
 
   #
+  # DWC3 controller
+  #
+  gRockchipTokenSpaceGuid.PcdDwc3BaseAddress|0xfc000000
+  gRockchipTokenSpaceGuid.PcdNumDwc3Controller|2
+  gRockchipTokenSpaceGuid.PcdDwc3Size|0x400000
+
+  #
+  # USB XHCI controller
+  #
+  gRockchipTokenSpaceGuid.PcdXhciBaseAddress|0xfc000000
+  gRockchipTokenSpaceGuid.PcdNumXhciController|2
+  gRockchipTokenSpaceGuid.PcdXhciSize|0x400000
+
+  #
   # Android Loader
   #
   gRK3588TokenSpaceGuid.PcdAndroidBootDevicePath|L"\\EFI\\BOOT\\GRUBAA64.EFI"
@@ -398,6 +412,16 @@
   # USB Ehci Controller
   #
   Silicon/Rockchip/Drivers/EhciDxe/EhciDxe.inf
+
+  #
+  # USB Dwc3 Controller
+  #
+  Silicon/Rockchip/Drivers/UsbDwc3InitDxe/UsbDwc3.inf
+
+  #
+  # USB Xhci Controller
+  #
+  Silicon/Rockchip/Drivers/XhciDxe/XhciDxe.inf
 
   #
   # USB Host Support

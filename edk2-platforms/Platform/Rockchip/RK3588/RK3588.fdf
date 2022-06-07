@@ -184,6 +184,16 @@ READ_LOCK_STATUS   = TRUE
   INF Silicon/Rockchip/Drivers/OhciDxe/OhciDxe.inf
 
   #
+  # USB Dwc3 Controller
+  #
+  INF Silicon/Rockchip/Drivers/UsbDwc3InitDxe/UsbDwc3.inf
+
+  #
+  # USB Xhci Controller
+  #
+  INF Silicon/Rockchip/Drivers/XhciDxe/XhciDxe.inf
+
+  #
   # USB Host Support
   #
   INF MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf
