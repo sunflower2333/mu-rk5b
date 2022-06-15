@@ -184,16 +184,16 @@
   #
   # PCIe controller
   #
-  gRockchipTokenSpaceGuid.PcdPcieRootPortApbBaseAddress|0xfe150000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortDbiBaseAddress|0xf5000000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortCfgBaseAddress|0xf0000000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortCfgSize|0x100000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortIoBaseAddress|0xf0100000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortIoSize|0x100000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortMemBaseAddress|0xf0200000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortMemSize|0xe00000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortMemBaseAddress64|0x900000000
-  gRockchipTokenSpaceGuid.PcdPcieRootPortMemSize64|0x40000000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4ApbBaseAddress|0xfe150000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4DbiBaseAddress|0xf5000000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4CfgBaseAddress|0xf0000000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4CfgSize|0x100000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4IoBaseAddress|0xf0100000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4IoSize|0x10000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4MemBaseAddress|0xf0200000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4MemSize|0xe00000
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4MemBaseAddress64|0x901000000 #deduct 0x1000000 ECAM space
+  gRockchipTokenSpaceGuid.PcdPcieRootPort3x4MemSize64|0x3f000000
 
 
   #
