@@ -391,8 +391,33 @@ PLATFORM_VIRTUAL_KBD_PROTOCOL mVirtualKeyboard = {
   VirtualKeyboardClear
 };
 
+STATIC  EFI_STATUS EFIAPI AppendArgs (
+  IN CHAR16            *Args,
+  IN UINTN              Size
+  )
+{
+	CHAR16 *newArgs =   (CHAR16 *)PcdGetPtr (PcdKernelBootArg);
+    UINTN srcSize, i, bootArgSize;
+
+    for (srcSize = 0; srcSize < Size / 2; srcSize++) {
+        if (!Args[srcSize])
+			break;
+    }
+
+    for (bootArgSize = 0; bootArgSize < Size / 2; bootArgSize++) {
+        if (!newArgs[bootArgSize])
+			break;
+    }
+
+	if (bootArgSize * 2 + srcSize * 2 < Size)
+	    for (i = 0; i < bootArgSize; i++)
+            Args[i] = newArgs[i];
+
+    return 0;
+}
+
 ANDROID_BOOTIMG_PROTOCOL mAndroidBootImageManager = {
-	  NULL,
+	  AppendArgs,
 	  NULL
 };
 

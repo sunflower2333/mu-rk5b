@@ -54,7 +54,7 @@
   gRK3588TokenSpaceGuid.PcdSdBootDevicePath
   gRK3588TokenSpaceGuid.AcpiEnable
   gRockchipTokenSpaceGuid.FspiBaseAddr
-
+  gRK3588TokenSpaceGuid.PcdKernelBootArg
 [Guids]
   gEfiEndOfDxeEventGroupGuid
 
