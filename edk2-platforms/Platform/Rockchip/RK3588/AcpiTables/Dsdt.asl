@@ -65,6 +65,7 @@ DefinitionBlock ("Dsdt.aml", "DSDT", 2, "RPIFDN", "RPI", 2)
       }
     }
 
+    include ("Emmc.asl")
     include ("Uart.asl")
   }
 }
