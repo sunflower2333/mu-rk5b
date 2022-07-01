@@ -32,3 +32,4 @@
   gRK3588TokenSpaceGuid.PcdSdBootDevicePath|L""|VOID*|0x00000004
   gRK3588TokenSpaceGuid.AcpiEnable|FALSE|BOOLEAN|0x00000005
   gRK3588TokenSpaceGuid.PcdKernelBootArg|L""|VOID*|0x00000006
+  gRK3588TokenSpaceGuid.PcdTotalMemorySize|0x0|UINT64|0x00000007

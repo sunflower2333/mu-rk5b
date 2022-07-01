@@ -116,7 +116,8 @@
   # System Memory (1GB)
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00000000
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x40000000
-
+  gRK3588TokenSpaceGuid.PcdTotalMemorySize|0x200000000
+  
   # RK3588 CPU profile
   gArmPlatformTokenSpaceGuid.PcdCoreCount|4
   gArmPlatformTokenSpaceGuid.PcdClusterCount|1
