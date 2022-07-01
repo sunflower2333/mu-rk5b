@@ -311,8 +311,6 @@
   gRockchipTokenSpaceGuid.PcdNvStorageFtwSpareBase|0|UINT32|0x21200007
 
   gRockchipTokenSpaceGuid.PcdLcdPixelFormat|0|UINT32|0x32000001
-  gRockchipTokenSpaceGuid.PcdLcdDdrFrameBufferSize|0|UINT64|0x32000002
-  gRockchipTokenSpaceGuid.PcdLcdDdrFrameBufferBase|0|UINT64|0x32000003
 
 [PcdsFeatureFlag]
   gRockchipTokenSpaceGuid.PcdIsItsSupported|FALSE|BOOLEAN|0x00000065

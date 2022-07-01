@@ -238,8 +238,6 @@
   # Display
   #
   gRockchipTokenSpaceGuid.PcdLcdPixelFormat|0x00000001
-  gRockchipTokenSpaceGuid.PcdLcdDdrFrameBufferSize|0x10000000
-  gRockchipTokenSpaceGuid.PcdLcdDdrFrameBufferBase|0x40000000
 
 [PcdsDynamicDefault.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableBase64|0x007C0000
