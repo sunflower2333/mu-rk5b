@@ -882,16 +882,29 @@ Vop2IfConfig (
 
   if (OutputIf & VOP_OUTPUT_IF_eDP0) {
     Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_EN, EN_MASK,
-                  RK3588_EDP0_EN_SHIFT, 1, FALSE);
+                   RK3588_EDP0_EN_SHIFT, 1, FALSE);
     /* temp eDP0 fixed vp2 */
     Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_EN, IF_MUX_MASK,
-                  RK3588_HDMI_EDP0_MUX_SHIFT, CrtcState->CrtcID, FALSE);
+                   RK3588_HDMI_EDP0_MUX_SHIFT, CrtcState->CrtcID, FALSE);
     Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_CTRL, 0x3,
-                  HDMI_EDP0_DCLK_DIV_SHIFT, IfDclkDiv, FALSE);
+                   HDMI_EDP0_DCLK_DIV_SHIFT, IfDclkDiv, FALSE);
     Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_CTRL, 0x3,
-                  HDMI_EDP0_PIXCLK_DIV_SHIFT, IfPixclkDiv, FALSE);
-    Vop2GrfWrite(RK3588_VOP_GRF_BASE, RK3588_GRF_VOP_CON2, EN_MASK,
-                 RK3588_GRF_EDP0_ENABLE_SHIFT, 1);
+                   HDMI_EDP0_PIXCLK_DIV_SHIFT, IfPixclkDiv, FALSE);
+    Vop2GrfWrite (RK3588_VOP_GRF_BASE, RK3588_GRF_VOP_CON2, EN_MASK,
+                  RK3588_GRF_EDP0_ENABLE_SHIFT, 1);
+  }
+
+  if (OutputIf & VOP_OUTPUT_IF_eDP1) {
+    Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_EN, EN_MASK,
+                   RK3588_EDP1_EN_SHIFT, 1, FALSE);
+    Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_EN, IF_MUX_MASK,
+                   RK3588_HDMI_EDP1_MUX_SHIFT, CrtcState->CrtcID, FALSE);
+    Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_CTRL, 0x3,
+                   HDMI_EDP1_DCLK_DIV_SHIFT, IfDclkDiv, FALSE);
+    Vop2MaskWrite (Vop2->BaseAddress, RK3568_DSP_IF_CTRL, 0x3,
+                   HDMI_EDP1_PIXCLK_DIV_SHIFT, IfPixclkDiv, FALSE);
+    Vop2GrfWrite (RK3588_VOP_GRF_BASE, RK3588_GRF_VOP_CON2, EN_MASK,
+                  RK3588_GRF_EDP1_ENABLE_SHIFT, 1);
   }
 
   /* temp eDP0 fixed vp2 */
