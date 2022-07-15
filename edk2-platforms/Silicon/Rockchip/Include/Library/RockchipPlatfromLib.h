@@ -48,6 +48,12 @@ SdhciGetClockRate (
 
 void
 EFIAPI
+GmacIomux(
+  UINT32 id
+  );
+
+void
+EFIAPI
 Rk806SpiIomux(void);
 
 void

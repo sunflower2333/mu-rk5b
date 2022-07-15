@@ -98,6 +98,30 @@ NorFspiIomux(void)
 #endif
 }
 
+void
+EFIAPI
+GmacIomux (
+   UINT32 id
+)
+{
+  switch (id) {
+  case 0:
+    /* gmac0 iomux */
+    BUS_IOC->GPIO2A_IOMUX_SEL_H = (0xFF00UL << 16) | 0x1100;
+    BUS_IOC->GPIO2B_IOMUX_SEL_L = (0xFFFFUL << 16) | 0x1111;
+    BUS_IOC->GPIO2B_IOMUX_SEL_H = (0xFF00UL << 16) | 0x1100;
+    BUS_IOC->GPIO2C_IOMUX_SEL_L = (0xFFFFUL << 16) | 0x1111;
+    BUS_IOC->GPIO4C_IOMUX_SEL_L = (0x0F00UL << 16) | 0x0100;
+    BUS_IOC->GPIO4C_IOMUX_SEL_H = (0x00FFUL << 16) | 0x0011;
+    break;
+  case 1:
+    /* gmac1 iomux */
+    break;
+  default:
+    break;
+  }
+}
+
 UINT32
 EFIAPI
 I2cGetBase (
