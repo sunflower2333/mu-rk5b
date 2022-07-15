@@ -39,6 +39,21 @@
       PLLE, 32,
     }
 
+    Method(SCLK, 1, Serialized) {
+      If (Arg0 <= 400000)
+      {
+        Store (0xFF00BF00, PLLE)
+      }
+      ElseIF (Arg0 <= 50000000)
+      {
+        Store (0xFF008000, PLLE)
+      }
+      Else
+      {
+        Store (0xFF000600, PLLE)
+      }
+    }
+
     Method(_PS3) {
 
     }
