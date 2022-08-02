@@ -122,6 +122,17 @@ GmacIomux (
   }
 }
 
+void
+EFIAPI
+NorFspiEnableClock (
+  UINT32 *CruBase
+)
+{
+  UINTN BaseAddr = (UINTN) CruBase;
+
+  MmioWrite32(BaseAddr + 0x087C, 0x0E000000);
+}
+
 UINT32
 EFIAPI
 I2cGetBase (

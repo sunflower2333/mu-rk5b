@@ -313,6 +313,7 @@
 
   gRockchipTokenSpaceGuid.FspiBaseAddr|0|UINT64|0x21200003
   gRockchipTokenSpaceGuid.PcdSpiVariableOffset|0|UINT32|0x21200004
+  gRockchipTokenSpaceGuid.CruBaseAddr|0|UINT64|0x21200008
 
   gRockchipTokenSpaceGuid.PcdNvStorageVariableBase|0|UINT32|0x21200005
   gRockchipTokenSpaceGuid.PcdNvStorageFtwWorkingBase|0|UINT32|0x21200006

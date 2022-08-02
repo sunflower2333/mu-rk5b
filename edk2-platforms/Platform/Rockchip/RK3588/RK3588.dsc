@@ -157,6 +157,10 @@
 
   ## NOR FLASH
   gRockchipTokenSpaceGuid.FspiBaseAddr|0xFE2B0000
+
+  ## CRU
+  gRockchipTokenSpaceGuid.CruBaseAddr|0xFD7C0000
+
   #gRockchipTokenSpaceGuid.PcdSpiVariableOffset|0x3C0000
   #
   # ARM General Interrupt Controller

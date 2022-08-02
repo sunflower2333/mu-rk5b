@@ -55,6 +55,7 @@
 
 [Pcd]
   gRockchipTokenSpaceGuid.FspiBaseAddr
+  gRockchipTokenSpaceGuid.CruBaseAddr
 
 [Depex]
  TRUE

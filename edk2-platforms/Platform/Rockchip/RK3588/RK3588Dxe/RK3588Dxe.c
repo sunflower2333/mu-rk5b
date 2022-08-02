@@ -634,6 +634,33 @@ STATIC VOID SetFlashAttributeToUncache(VOID)
   if (EFI_ERROR (Status)) {
     DEBUG ((DEBUG_ERROR, "%a: Failed to set memory attributes Status = %x\n",__FUNCTION__, Status));
   }
+
+  Status = gDS->AddMemorySpace (
+                     EfiGcdMemoryTypeMemoryMappedIo,
+                     PcdGet64(CruBaseAddr),
+                     SIZE_64KB,
+                     EFI_MEMORY_UC | EFI_MEMORY_RUNTIME
+                     );
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "RTC: Failed to add memory space Status = %r\n", Status));
+    return;
+  }
+
+  Status = gDS->GetMemorySpaceDescriptor(PcdGet64(CruBaseAddr),&desp);
+    DEBUG ((DEBUG_ERROR, "%a: GetMemorySpaceDescriptor status = %x\n", __FUNCTION__, Status));
+  if(EFI_ERROR(Status)){
+    return;
+  }
+
+  Status = gDS->SetMemorySpaceAttributes (
+                     PcdGet64(CruBaseAddr),
+                     SIZE_64KB,
+                     EFI_MEMORY_UC | EFI_MEMORY_RUNTIME
+                     );
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "%a: Failed to set memory attributes Status = %x\n",__FUNCTION__, Status));
+  }
+
 }
 
 EFI_STATUS

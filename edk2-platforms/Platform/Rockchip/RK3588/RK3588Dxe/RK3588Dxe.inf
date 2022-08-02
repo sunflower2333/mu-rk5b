@@ -53,6 +53,7 @@
   gRK3588TokenSpaceGuid.PcdAndroidFastbootFile
   gRK3588TokenSpaceGuid.PcdSdBootDevicePath
   gRK3588TokenSpaceGuid.AcpiEnable
+  gRockchipTokenSpaceGuid.CruBaseAddr
   gRockchipTokenSpaceGuid.FspiBaseAddr
   gRK3588TokenSpaceGuid.PcdKernelBootArg
   gRockchipTokenSpaceGuid.PcdComboPhyMode

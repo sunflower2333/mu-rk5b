@@ -60,6 +60,12 @@ void
 EFIAPI
 NorFspiIomux(void);
 
+void
+EFIAPI
+NorFspiEnableClock (
+  UINT32 *CruBase
+);
+
 UINT32
 EFIAPI
 I2cGetBase (
