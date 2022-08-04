@@ -319,7 +319,8 @@
   gRockchipTokenSpaceGuid.PcdNvStorageFtwSpareBase|0|UINT32|0x21200007
 
   gRockchipTokenSpaceGuid.PcdLcdPixelFormat|0|UINT32|0x32000001
-
+  gRockchipTokenSpaceGuid.PcdComboPhyMode|{ 0x0 }|VOID*|0x32000002
+  
 [PcdsFeatureFlag]
   gRockchipTokenSpaceGuid.PcdIsItsSupported|FALSE|BOOLEAN|0x00000065
 

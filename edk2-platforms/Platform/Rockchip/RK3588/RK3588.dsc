@@ -23,6 +23,11 @@
 
   DEFINE CONFIG_NO_DEBUGLIB      = TRUE
 
+  DEFINE CP_UNCONNECTED    = 0x0
+  DEFINE CP_PCIE           = 0x01
+  DEFINE CP_SATA           = 0x10
+  DEFINE CP_USB3           = 0x20
+
   #
   # Network definition
   #
@@ -252,6 +257,11 @@
   # Display
   #
   gRockchipTokenSpaceGuid.PcdLcdPixelFormat|0x00000001
+
+  #
+  # ComboPhy
+  #
+  gRockchipTokenSpaceGuid.PcdComboPhyMode|{ $(CP_SATA), $(CP_USB3), $(CP_PCIE) }
 
 [PcdsDynamicDefault.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableBase64|0x007C0000
