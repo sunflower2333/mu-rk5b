@@ -28,6 +28,8 @@
 #define SDHCI_HOST_CTRL3  (EMMC_BASE + 0x508)
 #define SDHCI_EMMC_CTRL   (EMMC_BASE + 0x52C)
 
+#define DWCMSHC_CARD_IS_EMMC		BIT0
+
 #define EMMC_DLL_CTRL       (EMMC_BASE + 0x800)
 #define EMMC_DLL_RXCLK      (EMMC_BASE + 0x804)
 #define EMMC_DLL_TXCLK      (EMMC_BASE + 0x808)
@@ -40,7 +42,7 @@ EFI_STATUS SdhciSetPHY(
   IN UINTN Clock
   )
 {
-  UINT32 Ctrl2;
+  UINT32 Ctrl2, Ctrl;
   UINT32 status, timeout, tmp;
 
   word32(SDHCI_EMMC_CTRL) |= (1 << 0); /* Host Controller is an eMMC card */
@@ -48,7 +50,7 @@ EFI_STATUS SdhciSetPHY(
     word32(EMMC_DLL_CTRL) = 0;
     word32(EMMC_DLL_RXCLK) = 0; /* PIO mode need set bit 29*/
     word32(EMMC_DLL_TXCLK) = 0;
-    word32(EMMC_DLL_STRBIN) = 0;
+    word32(EMMC_DLL_STRBIN) = (1 << 27) | (1 << 26) | (10 << 16);;
     word32(EMMC_DLL_CMDOUT) = 0;
     goto exit;
   }
@@ -83,6 +85,12 @@ EFI_STATUS SdhciSetPHY(
     word32(EMMC_DLL_RXCLK) = (1 << 27);
     word32(EMMC_DLL_TXCLK) = (1 << 29) | (1 << 27) | (1 << 24) | 0x8;
     word32(EMMC_DLL_STRBIN) = (1 << 27) | (1 << 24) | 0x4;
+    word32(EMMC_DLL_CMDOUT) = (1 << 29) | (1 << 28) | (1 << 27) | (1 << 24) | 0x8;
+
+	/* set CARD_IS_EMMC bit to enable Data Strobe for HS400 */
+	Ctrl = word32(SDHCI_EMMC_CTRL);
+	Ctrl |= DWCMSHC_CARD_IS_EMMC;
+	word32(SDHCI_EMMC_CTRL) = Ctrl;
   }
   else { /*config for HS200 mode*/
     word32(EMMC_DLL_RXCLK) = (1 << 29) | (1 << 27);
