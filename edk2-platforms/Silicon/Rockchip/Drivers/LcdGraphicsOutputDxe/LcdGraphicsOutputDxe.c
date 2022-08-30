@@ -419,7 +419,7 @@ LcdGraphicsOutputDxeInitialize (
   for (i = 0; i < mMaxMode; i++) {
     Mode = &mDisplayModes[i];
 
-    DisplayState = AllocatePool (sizeof(DISPLAY_STATE));
+    DisplayState = AllocateZeroPool (sizeof(DISPLAY_STATE));
     InitializeListHead (&DisplayState->ListHead);
 
     /* adapt to UEFI architecture */
