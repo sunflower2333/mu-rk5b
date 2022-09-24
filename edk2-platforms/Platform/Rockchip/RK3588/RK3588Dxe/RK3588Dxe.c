@@ -1,6 +1,6 @@
 /** @file
 *
-*  Copyright (c) 2018, Linaro Ltd. All rights reserved.
+*  Copyright (c) 2021, Rockchip Limited. All rights reserved.
 *
 *  SPDX-License-Identifier: BSD-2-Clause-Patent
 *
@@ -27,6 +27,8 @@
 #include <Protocol/PlatformVirtualKeyboard.h>
 #include <Protocol/AndroidBootImg.h>
 #include <Library/DxeServicesTableLib.h>
+#include <Library/NonDiscoverableDeviceRegistrationLib.h>
+#include <Protocol/NonDiscoverableDevice.h>
 
 #include <Soc.h>
 #include <Library/CruLib.h>
@@ -147,6 +149,12 @@ static UINTN ComPhyReg[3][2] = {
   {0xFEE00000, 0xFD5BC000},
   {0xFEE10000, 0xFD5C0000},
   {0xFEE20000, 0xFD5C4000},
+};
+
+static UINTN AhciReg[3] = {
+  0xFE210000,
+  0xFE220000,
+  0xFE230000,
 };
 
 UINTN
@@ -274,9 +282,18 @@ ComboPhyInit(void)
   HAL_CRU_ClkSetFreq(CLK_REF_PIPE_PHY2, 100 * 1000000);
 
   /* Initialize echo combo phy */
-  for (Index = 0; Index < ComPhyDeviceTableSize; Index++)
+  for (Index = 0; Index < ComPhyDeviceTableSize; Index++) {
     InitComPhyConfig (ComPhyReg[Index][0], ComPhyReg[Index][1], ComPhyMode[Index]);
-
+    if (ComPhyMode[Index] == CP_SATA) {
+		RegisterNonDiscoverableMmioDevice (
+           NonDiscoverableDeviceTypeAhci,
+           NonDiscoverableDeviceDmaTypeCoherent,
+           NULL,
+           NULL,
+           1,
+           AhciReg[Index], SIZE_4KB);
+    }
+  }
   /* Initialize SATA */
   data = MmioRead32(0xfe210000 + 0x118);
   MmioWrite32(0xfe210000 + 0x118, data | 1 << 22); /* FBSCP */

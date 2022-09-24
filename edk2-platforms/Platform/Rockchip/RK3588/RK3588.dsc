@@ -87,6 +87,9 @@
   # to delete
   AnalogixDpLib|Silicon/Rockchip/Library/DisplayLib/AnalogixDpLib.inf
 
+  UefiScsiLib|MdePkg/Library/UefiScsiLib/UefiScsiLib.inf
+  LockBoxLib|MdeModulePkg/Library/LockBoxNullLib/LockBoxNullLib.inf
+
 [LibraryClasses.common.SEC]
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf
   ExtractGuidedSectionLib|EmbeddedPkg/Library/PrePiExtractGuidedSectionLib/PrePiExtractGuidedSectionLib.inf
@@ -406,6 +409,13 @@
   Silicon/Rockchip/Drivers/NorFlashDxe/NorFlashDxe.inf
   Silicon/Rockchip/Drivers/NorFlashDxe/RkFvbDxe.inf
   Silicon/Rockchip/Applications/SpiTool/SpiFlashCmd.inf
+
+  #
+  # AHCI Support
+  #
+  Silicon/Rockchip/Drivers/SataControllerDxe/SataControllerDxe.inf
+  Silicon/Rockchip/Drivers/AtaAtapiPassThru/AtaAtapiPassThru.inf
+  MdeModulePkg/Bus/Ata/AtaBusDxe/AtaBusDxe.inf
 
   #
   # SPI TEST

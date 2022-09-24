@@ -37,6 +37,7 @@
   RK806
   CruLib
   ArmLib
+  NonDiscoverableDeviceRegistrationLib
 
 [Protocols]
   gEfiDevicePathFromTextProtocolGuid
