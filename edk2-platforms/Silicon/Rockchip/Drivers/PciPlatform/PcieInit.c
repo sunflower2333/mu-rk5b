@@ -18,7 +18,7 @@
 #include <Library/MemoryAllocationLib.h>
 #include <stdio.h>
 #include <Library/PcdLib.h>
-#include <Library/RockchipPlatfromLib.h>
+#include <Library/RockchipPlatformLib.h>
 
 extern VOID PcieRegWrite(UINT32 Port, UINTN Offset, UINT32 Value);
 extern EFI_STATUS PciePortReset(UINT32 HostBridgeNum, UINT32 Port);

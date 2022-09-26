@@ -6,11 +6,11 @@
 
 [Defines]
   INF_VERSION                    = 0x00010019
-  BASE_NAME                      = RockchipPlatfromLib
+  BASE_NAME                      = RockchipPlatformLib
   FILE_GUID                      = 5178fa86-2fec-11ec-95b4-f42a7dcb925d
   MODULE_TYPE                    = BASE
   VERSION_STRING                 = 1.0
-  LIBRARY_CLASS                  = RockchipPlatfromLib
+  LIBRARY_CLASS                  = RockchipPlatformLib
 
 [Packages]
   EmbeddedPkg/EmbeddedPkg.dec
@@ -29,7 +29,7 @@
   CruLib
 
 [Sources.common]
-  RockchipPlatfromLib.c
+  RockchipPlatformLib.c
   RK3588CruLib.c
   RockchipSdhci.c
 

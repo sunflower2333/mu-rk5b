@@ -6,18 +6,19 @@
 
 [Defines]
   INF_VERSION                    = 0x00010019
-  BASE_NAME                      = RockchipPlatfromLib
+  BASE_NAME                      = RockchipPlatformLib
   FILE_GUID                      = 5178fa86-2fec-11ec-95b4-f42a7dcb925d
   MODULE_TYPE                    = BASE
   VERSION_STRING                 = 1.0
-  LIBRARY_CLASS                  = RockchipPlatfromLib
+  LIBRARY_CLASS                  = RockchipPlatformLib
 
 [Packages]
   EmbeddedPkg/EmbeddedPkg.dec
   MdePkg/MdePkg.dec
   MdeModulePkg/MdeModulePkg.dec
-  Platform/Rockchip/RK3588/RK3588.dec
-  Silicon/Rockchip/RK3588/RK3588.dec
+  Platform/Rockchip/RK3568/RK3568.dec
+  Silicon/Rockchip/RK3568/RK3568.dec
+  Silicon/Rockchip/RockchipPkg.dec
 
 [LibraryClasses]
   ArmLib
@@ -25,10 +26,14 @@
   IoLib
   MemoryAllocationLib
   SerialPortLib
+  CruLib
 
 [Sources.common]
+  RockchipPlatformLib.c
   RK3568CruLib.c
+  RockchipSdhci.c
 
 [Sources.AARCH64]
 
-[FixedPcd]
+[Pcd]
+  gRockchipTokenSpaceGuid.PcdSdhciDxeBaseAddress

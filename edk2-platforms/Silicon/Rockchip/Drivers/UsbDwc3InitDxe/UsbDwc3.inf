@@ -32,7 +32,7 @@
   NonDiscoverableDeviceRegistrationLib
   UefiBootServicesTableLib
   UefiDriverEntryPoint
-  RockchipPlatfromLib
+  RockchipPlatformLib
 
 [FixedPcd]
   gRockchipTokenSpaceGuid.PcdNumDwc3Controller

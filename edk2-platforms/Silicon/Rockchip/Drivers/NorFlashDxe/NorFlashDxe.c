@@ -15,7 +15,7 @@
 #include <Protocol/NorFlashProtocol.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/DxeServicesTableLib.h>
-#include <Library/RockchipPlatfromLib.h>
+#include <Library/RockchipPlatformLib.h>
 #include <Library/MemoryAllocationLib.h>
 #include <Library/UefiLib.h>
 #include <Uefi/UefiBaseType.h>

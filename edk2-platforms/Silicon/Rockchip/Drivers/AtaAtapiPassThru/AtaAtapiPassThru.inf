@@ -57,7 +57,7 @@
   TimerLib
   ReportStatusCodeLib
   PcdLib
-  RockchipPlatfromLib
+  RockchipPlatformLib
   DmaLib
  
 [Protocols]

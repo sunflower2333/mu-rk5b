@@ -45,7 +45,7 @@
   MemoryAllocationLib
   UefiBootServicesTableLib
   PcdLib
-  RockchipPlatfromLib
+  RockchipPlatformLib
   DmaLib
 
 [Protocols]

@@ -44,7 +44,7 @@
   ArmLib|ArmPkg/Library/ArmLib/ArmBaseLib.inf
   AcpiLib|EmbeddedPkg/Library/AcpiLib/AcpiLib.inf
   ArmPlatformLib|Platform/Rockchip/RK3588/Library/RK3588Lib/RK3588Lib.inf
-  RockchipPlatfromLib|Platform/Rockchip/RK3588/Library/RockchipPlatfromLib/RockchipPlatfromLib.inf
+  RockchipPlatformLib|Platform/Rockchip/RK3588/Library/RockchipPlatformLib/RockchipPlatformLib.inf
   CruLib|Silicon/Rockchip/Library/CruLib/CruLib.inf
 
   DmaLib|EmbeddedPkg/Library/NonCoherentDmaLib/NonCoherentDmaLib.inf
@@ -100,7 +100,7 @@
   PrePiHobListPointerLib|ArmPlatformPkg/Library/PrePiHobListPointerLib/PrePiHobListPointerLib.inf
 
 [LibraryClasses.common.DXE_RUNTIME_DRIVER]
-  RockchipPlatfromLib|Platform/Rockchip/RK3588/Library/RockchipPlatfromLib/RockchipPlatfromLib.inf
+  RockchipPlatformLib|Platform/Rockchip/RK3588/Library/RockchipPlatformLib/RockchipPlatformLib.inf
 
 [BuildOptions]
   GCC:*_*_*_PLATFORM_FLAGS = -I$(WORKSPACE)/Silicon/Rockchip/RK3588/Include -I$(WORKSPACE)/Platform/Rockchip/RK3588/Include -I$(WORKSPACE)/Silicon/Rockchip/Include

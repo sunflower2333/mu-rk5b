@@ -53,7 +53,7 @@
   ReportStatusCodeLib
   PcdLib
   ReportStatusCodeLib
-  RockchipPlatfromLib
+  RockchipPlatformLib
   DmaLib
 
 [Guids]

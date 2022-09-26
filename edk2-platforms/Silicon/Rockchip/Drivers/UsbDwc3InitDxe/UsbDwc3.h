@@ -10,7 +10,7 @@
 #define USB_DWC3_H_
 
 #include <Base.h>
-#include <Library/RockchipPlatfromLib.h>
+#include <Library/RockchipPlatformLib.h>
 
 /* Global constants */
 #define DWC3_GSNPSID_MASK                      0xffff0000

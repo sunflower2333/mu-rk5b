@@ -35,7 +35,7 @@
   TimerLib
   PcdLib
   IoLib
-  RockchipPlatfromLib
+  RockchipPlatformLib
 
 [Protocols]
   #gEfiPcieRootBridgeProtocolGuid

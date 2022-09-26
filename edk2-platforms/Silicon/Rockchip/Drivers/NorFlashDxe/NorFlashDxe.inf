@@ -39,7 +39,7 @@
   TimerLib
   DxeServicesTableLib
   FspiLib
-  RockchipPlatfromLib
+  RockchipPlatformLib
 
   HobLib
   UefiRuntimeLib
