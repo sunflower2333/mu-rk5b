@@ -925,7 +925,7 @@ AhciPioTransfer (
   EFI_PHYSICAL_ADDRESS          PhyAddr;
   VOID                          *Map;
   UINTN                         MapLength;
-  EFI_PCI_IO_PROTOCOL_OPERATION Flag;
+  DMA_MAP_OPERATION Flag;
   EFI_AHCI_COMMAND_FIS          CFis;
   EFI_AHCI_COMMAND_LIST         CmdList;
   UINT32                        PrdCount;
@@ -1093,7 +1093,7 @@ AhciDmaTransfer (
   EFI_PHYSICAL_ADDRESS          PhyAddr;
   VOID                          *Map;
   UINTN                         MapLength;
-  EFI_PCI_IO_PROTOCOL_OPERATION Flag;
+  DMA_MAP_OPERATION             Flag;
   EFI_AHCI_COMMAND_FIS          CFis;
   EFI_AHCI_COMMAND_LIST         CmdList;
   UINT32                        AhciBaseAddress;

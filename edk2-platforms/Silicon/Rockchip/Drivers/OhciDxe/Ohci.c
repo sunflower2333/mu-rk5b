@@ -2125,7 +2125,7 @@ OhciInitialiseController (
   )
 {
   USB_OHCI_HC_DEV         *Ohc;
-  EFI_STATUS              Status;
+  EFI_STATUS              Status = EFI_SUCCESS; // Return SUCCESS by default
   VOID                    *Buf;
   EFI_PHYSICAL_ADDRESS    PhyAddr;
   VOID                    *Map;

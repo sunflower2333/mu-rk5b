@@ -51,7 +51,7 @@
 [Protocols]
   gEdkiiNonDiscoverableDeviceProtocolGuid       ## TO_START
   gEfiIdeControllerInitProtocolGuid         ## BY_START
-
+  gEfiPciIoProtocolGuid
 [UserExtensions.TianoCore."ExtraFiles"]
   SataControllerDxeExtra.uni
 

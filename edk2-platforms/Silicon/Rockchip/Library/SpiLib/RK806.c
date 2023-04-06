@@ -500,7 +500,7 @@ static RETURN_STATUS pldo_set_enable(INT32 reg_id, BOOLEAN enable)
 	INT32 cs_id = (reg_id & 0xf00) >> 8;
 	INT32 pldo = reg_id & 0x0f;
 	UINT8 value, en_reg;
-	RETURN_STATUS ret;
+	RETURN_STATUS ret = RETURN_DEVICE_ERROR; // Return err by default.
 
 	if (pldo < 3) {
 		en_reg = RK806_PLDO_EN(0);

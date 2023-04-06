@@ -541,6 +541,7 @@ AtaAtapiPassThruStart (
   IdeControllerInit     = NULL;
   Instance              = NULL;
   OriginalPciAttributes = 0;
+  EnabledPciAttributes  = 0;
 
   DEBUG ((EFI_D_INFO, "==AtaAtapiPassThru Start== Controller = %x\n", Controller));
 

@@ -182,10 +182,10 @@
   #
   # DW SD card controller
   #
-  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeBaseAddress|0xfe2c0000
-  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeClockFrequencyInHz|100000000
-  gDesignWareTokenSpaceGuid.PcdDwPermitObsoleteDrivers|TRUE
-  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeFifoDepth|256
+#  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeBaseAddress|0xfe2c0000
+#  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeClockFrequencyInHz|100000000
+#  gDesignWareTokenSpaceGuid.PcdDwPermitObsoleteDrivers|TRUE
+#  gDesignWareTokenSpaceGuid.PcdDwEmmcDxeFifoDepth|256
   #
   # SDHCI controller
   #
@@ -264,7 +264,7 @@
   gRockchipTokenSpaceGuid.PcdLcdPixelFormat|0x00000001
   gRockchipTokenSpaceGuid.PcdEdpId|0x00000000 #edp0
   #gRockchipTokenSpaceGuid.PcdEdpId|0x00000001 #edp1
-  gRockchipTokenSpaceGuid.PcdHdmiId|0x00000000 #hdmi0
+  gRockchipTokenSpaceGuid.PcdHdmiId|0x00000001 #hdmi1
   #gRockchipTokenSpaceGuid.PcdHdmiId|0x00000001 #hdmi1
 
   #
@@ -282,8 +282,8 @@
   #
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|0x780
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|0x438
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|0
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|0
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|80
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|80
 
 ################################################################################
 #
@@ -403,9 +403,9 @@
   #
   #EmbeddedPkg/Universal/MmcDxe/MmcDxe.inf
   #Silicon/Synopsys/DesignWare/Drivers/DwEmmcDxe/DwEmmcDxe.inf
-  Silicon/Rockchip/Drivers/MmcDxe/MmcDxe.inf
+#  Silicon/Rockchip/Drivers/MmcDxe/MmcDxe.inf
   #Silicon/Rockchip/Drivers/DwEmmcDxe/DwEmmcDxe.inf
-  Silicon/Rockchip/Drivers/SdhciHostDxe/SdhciHostDxe.inf
+#  Silicon/Rockchip/Drivers/SdhciHostDxe/SdhciHostDxe.inf
 
   #
   # NOR FLASH
