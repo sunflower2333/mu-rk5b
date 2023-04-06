@@ -1,0 +1,29 @@
+# Local
+.DS_Store
+.vs
+.vscode
+.img
+
+/Build/
+.DS_Store
+*_extdep/
+*.pyc
+__pycache__/
+tags/
+.vscode/
+*.bak
+BuildConfig.conf
+/Conf/
+/SurfaceDuo/
+
+# IDA Pro Runtime temporary file
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+
+# IDA Pro 64 packaged data
+*.i64
+# IDA Pro 32 packaged data
+*.idb
