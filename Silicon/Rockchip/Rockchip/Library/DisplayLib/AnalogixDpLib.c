@@ -736,7 +736,7 @@ AnalogixDpProcessClockRecovery (
       if (Dp->LinkTrain.CrLoop[Lane] == MAX_CR_LOOP ||
           VoltageSwing == VOLTAGE_LEVEL_3 ||
           PreEmphasis == PRE_EMPHASIS_LEVEL_3) {
-        DEBUG ((EFI_D_ERROR, "CR Max reached (%d,%d)\n",
+        DEBUG ((EFI_D_ERROR, "CR Max reached (%d,%d,%d)\n",
               Dp->LinkTrain.CrLoop[Lane],
               VoltageSwing, PreEmphasis));
         AnalogixDpReduceLinkRate(Dp);

@@ -293,7 +293,7 @@ static int rockchip_pcie_init_port(struct rk_pcie *priv)
 	Pcie30PowerEn();
 	msleep(100000);
 
-	//DEBUG((EFI_D_ERROR, "0xFD5F8070 = 0x%x, 0xFEC4000c = 0x%x, 0xFEC50004 = 0x%x\n", 0));
+	// _DEBUG_((EFI_D_ERROR, "0xFD5F8070 = 0x%x, 0xFEC4000c = 0x%x, 0xFEC50004 = 0x%x\n", 0));
 
 	/* Disable power domain */
 	MmioWrite32(0xFD8D8150, 0x1 << 23 | 0x1 << 21); //PD_PCIE & PD_PHP
@@ -349,8 +349,8 @@ static int rockchip_pcie_init_port(struct rk_pcie *priv)
 	if (ret < 0)
 		return ret;
 
-	DEBUG((EFI_D_ERROR, "PCIe Init sucessfully (Gen%d-x%d, Bus%d)\n",
-			rk_pcie_get_link_speed(priv),rk_pcie_get_link_width(priv)));
+	DEBUG((EFI_D_ERROR, "PCIe Init sucessfully (Gen%d-x%d)\n",
+			  rk_pcie_get_link_speed(priv),rk_pcie_get_link_width(priv)));
 	rk_pcie_dbi_write_enable(priv, TRUE);
 	msleep(10000);
 

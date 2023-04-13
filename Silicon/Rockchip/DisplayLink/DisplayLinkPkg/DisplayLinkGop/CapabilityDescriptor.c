@@ -130,7 +130,7 @@ UsbDisplayLinkCapabilitiesSufficientToBind (
   Sufficient = (BOOLEAN)(Descriptor->Capabilities1 & CAPABILITIES1_BASE_PROTOCOL);
 
   if (Sufficient == FALSE) {
-    DEBUG ((DEBUG_ERROR, "DisplayLink device does not report support for base capabilites - reports x%x, required x%x\n", Descriptor->Capabilities1 & CAPABILITIES1_BASE_PROTOCOL));
+    DEBUG ((DEBUG_ERROR, "DisplayLink device does not report support for base capabilites - reports x%x\n", Descriptor->Capabilities1 & CAPABILITIES1_BASE_PROTOCOL));
   }
   return Sufficient;
 }
