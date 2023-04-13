@@ -28,5 +28,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: uefi-images
+          name: RK3588_NOR_FLASH.img
           path: Build/RK3588_NOR_FLASH.img
