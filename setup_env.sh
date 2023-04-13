@@ -7,5 +7,8 @@ sudo apt -y install pip git mono-devel build-essential nuget build-essential uui
 # Clang LLVM
 sudo apt install -y clang llvm gcc-aarch64-linux-gnu
 
+# Setup python modules
+pip install --upgrade -r pip-requirements.txt
+
 export CLANG38_BIN=/usr/lib/llvm-11/bin/
 export CLANG38_AARCH64_PREFIX=aarch64-linux-gnu-
